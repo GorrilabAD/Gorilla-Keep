@@ -24,12 +24,12 @@ ul {
     color: #353535;
     position: relative;
     height: 36px;
-    margin: 0;
+    margin: 0 auto;
     min-width: 64px;
     padding: 0 16px;
     display: inline-block;
-    font-family: "Consolas","Helvetica","Arial",sans-serif;
-    font-size: 14px;
+    float: left;
+    margin-top: 50px;
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 0;
@@ -39,9 +39,7 @@ ul {
     outline: none;
     cursor: pointer;
     text-decoration: none;
-    text-align: center;
     line-height: 36px;
-    vertical-align: middle;
 }
 
 button:hover {
@@ -91,7 +89,6 @@ input.textfield {
     font-family: 'Consolas', Arial, Helvetica, sans-serif;
     font-size: 1rem;
     color: #000;
-    /* padding: .5em; */
     height: 30px;
     border-radius: 2px;
     border: none;
@@ -99,12 +96,15 @@ input.textfield {
     outline: none;
     margin-left: 30px;
     width: 325px;
+    float: left;
     margin-top: 40px;
-    /* margin-bottom: 50%; */
-    /* padding-bottom: 30px; */
-    /* padding-top: 75px; */
+    display: none;
     box-shadow: 0 2px 25px 0 rgba(0,0,0,0.74), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
 }
+.editing input{
+  display: inline-block;
+}
+
 main {
     background: rgba(0,0,0, .0001);
     width: 970px;
@@ -124,7 +124,6 @@ header {
        rgba(40, 110, 253, 0.7),
         rgba(121, 171, 235, 0.7),
          rgba(121, 246, 235, 0.7) );
-    text-align: center;
     text-transform: uppercase;
     margin-bottom: 30px;
 }
@@ -149,13 +148,11 @@ header h1 {
     display: block;
     margin: 0 auto;
     padding-top: 10px;
+    padding-left: 20px;
     margin-top: 35px;
-    text-align: center;
     border-radius: 5px;
   }
 
-
-/* Todo Item */
 .todo-item {
     display: flex;
     font-size: 1rem;
@@ -168,7 +165,7 @@ header h1 {
     align-items: center;
 }
 
-.todo-item.completed * {
+.todo-item .completed {
     color: #000;
 }
 
@@ -209,17 +206,11 @@ header h1 {
 .title {
     position: relative;
     margin: 0 auto;
-    /* left: 50%; */
-    /* right: 50%; */
     display: block;
     margin: 0 auto;
     font-size: 23px;
     top: 10px;
 }
-
-
-
-/* Todo form */
 
 #todo-form {
     display: flex;
@@ -250,7 +241,6 @@ header h1 {
   color: #757575;
   padding: .5em;
   border-radius: 2px;
-  /* border: 1px solid lightgray; */
   border: none;
   outline: none;
   margin-left: 20px;
@@ -261,4 +251,8 @@ header h1 {
 #add-button {
   margin-top: 20px;
   margin-bottom: 20px;
+}
+.completed {
+  text-decoration: line-through;
+  color: #777;
 }
